@@ -6,10 +6,6 @@ orbs:
 workflows:
   main:
     jobs:
-      - lint
-      - mypy
-      - test_36
-      - test_37
       - test_38
       - test_39
       - test_310
