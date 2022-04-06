@@ -43,14 +43,7 @@ jobs:
       - run:
           name: Run tests
           command: tox
-      - save_cache:
-          key: poetry_deps_{{checksum "poetry.lock"}}
-          paths: ~/.cache/pypoetry/
-      - store_test_results:
-          path: /tmp/tests/
-      # this step will simply fail for other jobs
-      - codecov/upload:
-          file: ./pytest-cov.pth
+      
 
   test_37:
     docker:
